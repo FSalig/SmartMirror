@@ -36,7 +36,7 @@ function rss2html($url,$anz,$length,$target) {
 				$string = str_replace($string_ende," ... ", $string);
 			}
 			$output .= $string;
-			$output .= ' <span class="weiter"><a href="'.$item->link.'" '.$target.'>weiterlesen:&nbsp;"'.$wort[0].'&nbsp;'.$wort[1].'&nbsp;..."</a></span>';
+			//$output .= ' <span class="weiter"><a href="'.$item->link.'" '.$target.'>weiterlesen:&nbsp;"'.$wort[0].'&nbsp;'.$wort[1].'&nbsp;..."</a></span>';
 			$output .= '</li>';
 
 			if($n>=$anz){break;}
