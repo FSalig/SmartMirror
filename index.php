@@ -23,6 +23,10 @@
 
     <div id="blueRow"> </div>
 
+    <div class="videoHhn">
+    <iframe src="https://www.youtube.com/embed/yq_1pGwEV1U?autoplay=1&loop=1&playlist=yq_1pGwEV1U&controls=0&mute=1&start=1&rel=0&loop=1" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+    </iframe> </div>
+
     <h2> Wetterbericht </h2>
 
     <div id="id283ff89afc2e0" a='{"t":"r","v":"1.2","lang":"de","locs":[3517],"ssot":"c","sics":"ds","cbkg":"rgba(35,85,156,1)","cfnt":"#FFFFFF","codd":"#1E88E5","cont":"#E0E0E0","stof":"7"}'>Wetterdatenquelle: <a href="https://wetterlabs.de/wetter_künzelsau/">https://wetterlabs.de/wetter_künzelsau/</a></div>
