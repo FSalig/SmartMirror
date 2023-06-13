@@ -13,16 +13,18 @@ libxml_use_internal_errors(true);
 
 function rss2html($url,$anz,$length,$target) {
 	$n=1;
-	if ($target == 1) {$target = ' target="_blank"';} else {$target = '';}
+	if ($target == 1) {$target = ' target="_blank"';} else {$target = '';} 
 	$output = '<ul>';
+
 	if ($rss = @simplexml_load_file($url)) {
 		foreach($rss->channel->item as $item) {
 			$title = str_replace ("& ","&amp; ",$item->title);
 			$wort = explode(" ", $title);  //erstes Wort 
 			if (!isset($wort[1])) { $wort[1] = null; }
 		  
-			$output .= '<li class="item_link">';
-			$output .= '<h3><a href = "'.$item->link.'" '.$target.'>'.$item->title.'</a></h3> ';
+			$output .= '<class="item_link">';
+			$output .= '<h3>'.$item->title.'</h3> ';
+			//$output .= '<h3><a href = "'.$item->link.'" '.$target.'>'.$item->title.'</a></h3> ';
 
 			if (isset($item->pubDate)) {
 				$output .= '<span class="it_date">';
