@@ -23,7 +23,7 @@ function rss2htmlPlan($url,$anz,$length,$target) {
 			if (!isset($wort[1])) { $wort[1] = null; }
 		  
 			$output .= '<class="item_link">';
-			$output .= '<h3>'.$item->title.'</h3> ';
+			$output .= '<h4>'.$item->title.'</h4> ';
 			//$output .= '<h3><a href = "'.$item->link.'" '.$target.'>'.$item->title.'</a></h3> ';
 
 			if (isset($item->pubDate)) {

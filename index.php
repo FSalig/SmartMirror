@@ -37,20 +37,32 @@
       <div class="rssfeedFaz">
         <?php
         include "feedreaderNews.php";
-        echo rss2html("https://www.faz.net/rss/aktuell/technik-motor/", 4, 200, 1);?>
+        echo rss2html("https://www.faz.net/rss/aktuell/technik-motor/", 4, 200, 1); ?>
       </div>
 
-      <div class="rssfeedPlan">
-        <?php
-        include "feedreaderPlan.php";
-        echo rss2htmlPlan("https://www.mensaplan.de/feeds/pois/kue1/speiseplan.rss", 4, 200, 1); ?>
+      <div class="feedBoxRight">
+
+        <div class="calender">
+          <?php
+          include "calender.php";
+          echo icsReader("https://cdn.hs-heilbronn.de/72b00bd04579b8ba/2b7dc5608d1a/2023-02-20-Kalender-von-Semesterterminplan-SS23.ics", 7); ?>
+        </div>
+
+        <div class="rssfeedPlan">
+          <?php
+          include "feedreaderPlan.php";
+          echo rss2htmlPlan("https://www.mensaplan.de/feeds/pois/kue1/speiseplan.rss", 4, 200, 1); ?>
+        </div>
+
       </div>
+
     </div>
+
 
     <footer class="fixed-bottom" id="footer">
       <div id="blueRowBottom"> </div>
-      <h4> Projektlabor im Sommersemester 2023 von Judith Ballmann und Franziska Salig <br/>
-       Automatisierungstechnik und Elektro-Maschinenbau, Elektrotechnik </h4>
+      <h4> Projektlabor im Sommersemester 2023 von Judith Ballmann und Franziska Salig <br />
+        Automatisierungstechnik und Elektro-Maschinenbau, Elektrotechnik </h4>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
