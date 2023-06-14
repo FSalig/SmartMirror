@@ -23,7 +23,7 @@ function rss2html($url,$anz,$length,$target) {
 			if (!isset($wort[1])) { $wort[1] = null; }
 		  
 			$output .= '<class="item_link">';
-			$output .= '<h3>'.$item->title.'</h3> ';
+			$output .= '<h4>'.$item->title.'</h4> ';
 			//$output .= '<h3><a href = "'.$item->link.'" '.$target.'>'.$item->title.'</a></h3> ';
 
 			if (isset($item->pubDate)) {
@@ -31,15 +31,19 @@ function rss2html($url,$anz,$length,$target) {
 				$output .= date("d.m.Y H:i",strtotime($item->pubDate)).' Uhr</span><br>';
 			} 
 		
+			$output .= '<div class="feed">';
+
+			if (isset($item->children("media", true)->thumbnail->attributes()['url'])){
+				$output .= '<img width="142.5px" height="80.25px" border="0" src="'.$item->children("media",true)->thumbnail->attributes()['url'].'">';
+			}
+
 			if (isset($item->description)) {
 				$string = $item->description;
 				$text = strip_tags($string, '<p>');
 				$output .= $text;
 			}
 
-			if (isset($item->children("media", true)->thumbnail->attributes()['url'])){
-				$output .= '<img width="95px" height="53.5px" border="0" src="'.$item->children("media",true)->thumbnail->attributes()['url'].'">';
-			}
+			$output .= '</div>';
 			
 			/*$string = $item->description;
 			echo strip_tags ($string, '<p>');

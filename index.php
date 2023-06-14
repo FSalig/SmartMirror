@@ -18,7 +18,7 @@
 
     <div class="header">
       <h1> Smart Mirror </h1>
-      <img src="pictures/logohhn.jpg" alt="Logo HHN" width="30%" height="auto">
+      <img src="pictures/logohhn.jpg" alt="Logo HHN" width="25%" height="auto">
     </div>
 
     <div id="blueRow"> </div>
@@ -28,7 +28,7 @@
       </iframe>
     </div>
 
-    <h2> Wetterbericht </h2>
+    <!-- <h2> Wetterbericht </h2> -->
 
     <div id="id283ff89afc2e0" a='{"t":"r","v":"1.2","lang":"de","locs":[3517],"ssot":"c","sics":"ds","cbkg":"rgba(35,85,156,1)","cfnt":"#FFFFFF","codd":"#1E88E5","cont":"#E0E0E0","stof":"7"}'>Wetterdatenquelle: <a href="https://wetterlabs.de/wetter_künzelsau/">https://wetterlabs.de/wetter_künzelsau/</a></div>
     <script async src="https://static1.wetterlabs.de/widgetjs/?id=id283ff89afc2e0"></script>
@@ -49,7 +49,8 @@
 
     <footer class="fixed-bottom" id="footer">
       <div id="blueRowBottom"> </div>
-      <h3> Projektlabor im Sommersemester 2023 von Judith Ballmann und Franziska Salig </h3>
+      <h4> Projektlabor im Sommersemester 2023 von Judith Ballmann und Franziska Salig <br/>
+       Automatisierungstechnik und Elektro-Maschinenbau, Elektrotechnik </h4>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

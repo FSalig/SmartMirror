@@ -12,6 +12,7 @@
 
 .videoHhn {
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 iframe {
@@ -46,14 +47,26 @@ h2 {
 
 .rssfeedFaz {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 20px;
-    width: 47.5%;
+    width: 49%;
     height: auto;
     padding-right: 15px;
     border-style: solid;
     border-width: 5px;
     border-radius: 15px;
     border-color: #2760b1;
+}
+
+.feed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feed p {
+    margin-left: 10px;
 }
 
 .rssfeedPlan {
@@ -79,9 +92,8 @@ h2 {
     background-color: #2760b1;
 }
 
-h3 {
+h4 {
     margin-top: 20px;
-    margin-bottom: 10px;
     color: #202020;
     padding: 3px;
 }
