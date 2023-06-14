@@ -34,15 +34,16 @@
     <script async src="https://static1.wetterlabs.de/widgetjs/?id=id283ff89afc2e0"></script>
 
     <div id="feedBox">
-      <div class="rssfeed">
+      <div class="rssfeedFaz">
         <?php
-        include "feedreader.php";
-        echo rss2html("https://www.faz.net/rss/aktuell/technik-motor/", 4, 200, 1); ?>
+        include "feedreaderNews.php";
+        echo rss2html("https://www.faz.net/rss/aktuell/technik-motor/", 4, 200, 1);?>
       </div>
 
-      <div class="rssfeed">
+      <div class="rssfeedPlan">
         <?php
-        echo rss2html("https://www.mensaplan.de/feeds/pois/kue1/speiseplan.rss", 4, 200, 1); ?>
+        include "feedreaderPlan.php";
+        echo rss2htmlPlan("https://www.mensaplan.de/feeds/pois/kue1/speiseplan.rss", 4, 200, 1); ?>
       </div>
     </div>
 

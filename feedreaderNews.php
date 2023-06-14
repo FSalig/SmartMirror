@@ -31,15 +31,19 @@ function rss2html($url,$anz,$length,$target) {
 				$output .= date("d.m.Y H:i",strtotime($item->pubDate)).' Uhr</span><br>';
 			} 
 		
-			$string = $item->description;
-			if($length && strlen($string) > $length) {
+			//$string = $item->description;
+
+			$string = '<img width="95px" height="53.5px" border="0" src="'.$item->children("media",true)->thumbnail->attributes()['url'].'">';
+			
+			/*if($length && strlen($string) > $length) {
 				$string = substr($string,0,$length)."...";
 				$string_ende = strrchr($string, " ");
 				$string = str_replace($string_ende," ... ", $string);
-			}
+			}*/
+			
 			$output .= $string;
 			//$output .= ' <span class="weiter"><a href="'.$item->link.'" '.$target.'>weiterlesen:&nbsp;"'.$wort[0].'&nbsp;'.$wort[1].'&nbsp;..."</a></span>';
-			$output .= '</li>';
+			//$output .= '</li>';
 
 			if($n>=$anz){break;}
 			$n++;
