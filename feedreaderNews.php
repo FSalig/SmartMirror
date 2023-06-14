@@ -31,9 +31,21 @@ function rss2html($url,$anz,$length,$target) {
 				$output .= date("d.m.Y H:i",strtotime($item->pubDate)).' Uhr</span><br>';
 			} 
 		
-			//$string = $item->description;
+			if (isset($item->description)) {
+				$string = $item->description;
+				$text = strip_tags($string, '<p>');
+				$output .= $text;
+			}
 
-			$string = '<img width="95px" height="53.5px" border="0" src="'.$item->children("media",true)->thumbnail->attributes()['url'].'">';
+			if (isset($item->children("media", true)->thumbnail->attributes()['url'])){
+				$output .= '<img width="95px" height="53.5px" border="0" src="'.$item->children("media",true)->thumbnail->attributes()['url'].'">';
+			}
+			
+			/*$string = $item->description;
+			echo strip_tags ($string, '<p>');
+			$text = $string;*/
+
+			//$imagetag = '<img width="95px" height="53.5px" border="0" src="'.$item->children("media",true)->thumbnail->attributes()['url'].'">';
 			
 			/*if($length && strlen($string) > $length) {
 				$string = substr($string,0,$length)."...";
@@ -41,7 +53,9 @@ function rss2html($url,$anz,$length,$target) {
 				$string = str_replace($string_ende," ... ", $string);
 			}*/
 			
-			$output .= $string;
+			/*$output .= $text;
+			$output .= $imagetag; */
+
 			//$output .= ' <span class="weiter"><a href="'.$item->link.'" '.$target.'>weiterlesen:&nbsp;"'.$wort[0].'&nbsp;'.$wort[1].'&nbsp;..."</a></span>';
 			//$output .= '</li>';
 
