@@ -46,7 +46,7 @@
           <?php
           include "calender.php";
           //echo icsReader("https://cdn.hs-heilbronn.de/72b00bd04579b8ba/2b7dc5608d1a/2023-02-20-Kalender-von-Semesterterminplan-SS23.ics", 7); 
-          echo icsReader ("ical/2023-02-20-Kalender-von-Semesterterminplan-SS23.ics",7);
+          echo icsReader ("https://calendar.google.com/calendar/ical/smartmirrorhhn%40gmail.com/private-0faf9880120ad9ab58c38b33ccd2e04f/basic.ics",7);
           ?>
         </div> 
 

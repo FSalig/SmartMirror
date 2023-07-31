@@ -19,7 +19,7 @@ class iCalEvent
     {
         $content = str_replace("\r\n ", '', $eventContent);
 
-        $this->title = $this->getEventDetail($content, "SUMMARY;LANGUAGE=de:");
+        $this->title = $this->getEventDetail($content, "SUMMARY:");
         $this->description = $this->getEventDetail($content, "DESCRIPTION:");
         $this->startDateTime = $this->getEventDateTime($content, "DTSTART");
         $this->endDateTime = $this->getEventDateTime($content, "DTEND");
