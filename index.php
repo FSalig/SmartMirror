@@ -24,7 +24,7 @@
     <div id="blueRow"> </div>
 
     <div class="videoHhn">
-      <iframe src="https://www.youtube.com/embed/yq_1pGwEV1U?autoplay=1&loop=1&playlist=yq_1pGwEV1U&controls=0&mute=1&start=1&rel=0&loop=1" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+      <iframe src="https://www.youtube.com/embed/yq_1pGwEV1U?autoplay=1&playlist=yq_1pGwEV1U&controls=0&mute=1&start=1&rel=0&loop=0" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
       </iframe>
     </div>
 
@@ -46,7 +46,7 @@
           <?php
           include "calender.php";
           //echo icsReader("https://cdn.hs-heilbronn.de/72b00bd04579b8ba/2b7dc5608d1a/2023-02-20-Kalender-von-Semesterterminplan-SS23.ics", 7); 
-          echo icsReader ("https://calendar.google.com/calendar/ical/smartmirrorhhn%40gmail.com/private-0faf9880120ad9ab58c38b33ccd2e04f/basic.ics",7);
+          echo icsReader ("https://calendar.google.com/calendar/ical/smartmirrorhhn%40gmail.com/public/basic.ics",7);
           ?>
         </div> 
 
